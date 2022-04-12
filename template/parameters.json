@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "germanywestcentral"
+            "value": "northeurope"
         },
         "networkInterfaceName": {
             "value": "template-interface"
@@ -22,7 +22,7 @@
         },
         "addressPrefixes": {
             "value": [
-                "10.0.0.0/16"
+                "10.0.0.0/26"
             ]
         },
         "subnets": {
@@ -36,7 +36,7 @@
             ]
         },
         "publicIpAddressName": {
-            "value": "template-vm-ip"
+            "value": "template-ip"
         },
         "publicIpAddressType": {
             "value": "Dynamic"
@@ -72,7 +72,7 @@
             "value": "azure"
         },
         "adminPassword": {
-            "value": null
+            "value": "Tmhg9J<U}N[HE)ru"
         },
         "patchMode": {
             "value": "AutomaticByOS"

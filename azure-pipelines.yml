@@ -7,13 +7,12 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'windows-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: AzurePowerShell@5
+  inputs:
+    azureSubscription: '28f9aee8-f84f-4e4c-98ab-78353599c2e5'
+    ScriptType: 'FilePath'
+    ScriptPath: './templateps.ps1'
+    azurePowerShellVersion: 'LatestVersion'
