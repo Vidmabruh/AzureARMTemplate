@@ -12,7 +12,7 @@ pool:
 steps:
 - task: AzurePowerShell@5
   inputs:
-    azureSubscription: '28f9aee8-f84f-4e4c-98ab-78353599c2e5'
+    azureSubscription: 'MPN_VKL'
     ScriptType: 'FilePath'
     ScriptPath: './templateps.ps1'
     azurePowerShellVersion: 'LatestVersion'
