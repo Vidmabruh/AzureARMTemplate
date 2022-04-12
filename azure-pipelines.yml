@@ -10,10 +10,13 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- task: AzurePowerShell@5
+- task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    azureSubscription: ''
-    ScriptType: 'InlineScript'
-    Inline:  'New-AzDeployment -TemplateFile  "./template/template.json" -TemplateParameterFile "./template/parameters.json" -Location northeurope'
-    azurePowerShellVersion: 'LatestVersion'
-    pwsh: true
+    deploymentScope: 'Resource Group'
+    subscriptionId: '28f9aee8-f84f-4e4c-98ab-78353599c2e5'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'template'
+    location: 'North Europe'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/patrikas-sestokas/AzureARMTemplate/main/VMtest.json'
+    deploymentMode: 'Incremental'
