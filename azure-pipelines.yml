@@ -12,7 +12,8 @@ pool:
 steps:
 - task: AzurePowerShell@5
   inputs:
-    azureSubscription: 'MPN_VKL'
-    ScriptType: 'FilePath'
-    ScriptPath: './templateps.ps1'
+    azureSubscription: ''
+    ScriptType: 'InlineScript'
+    Inline:  'New-AzDeployment -TemplateFile  "./template/template.json" -TemplateParameterFile "./template/parameters.json" -Location northeurope'
     azurePowerShellVersion: 'LatestVersion'
+    pwsh: true
