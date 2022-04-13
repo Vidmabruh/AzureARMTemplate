@@ -13,7 +13,7 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    subscriptionId: '28f9aee8-f84f-4e4c-98ab-78353599c2e5'
+    subscriptionId: 'ec765027-1f12-4615-a2fc-1a3a9f44cda2'
     azureResourceManagerConnection: 'VMDeploymentService'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'template'
