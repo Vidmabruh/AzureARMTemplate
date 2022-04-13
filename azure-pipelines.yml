@@ -12,12 +12,9 @@ pool:
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
+    ConnectedServiceName: 'VMDeploymentService'
     deploymentScope: 'Resource Group'
     subscriptionId: 'ec765027-1f12-4615-a2fc-1a3a9f44cda2'
-    azureResourceManagerConnection: 'VMDeploymentService'
-    action: 'Create Or Update Resource Group'
     resourceGroupName: 'template'
-    location: 'North Europe'
-    templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/patrikas-sestokas/AzureARMTemplate/main/VMtest.json'
-    deploymentMode: 'Incremental'
+    csmFileLink: 'https://raw.githubusercontent.com/patrikas-sestokas/AzureARMTemplate/main/template/template.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/patrikas-sestokas/AzureARMTemplate/main/template/parameters.json'
