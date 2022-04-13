@@ -14,6 +14,7 @@ steps:
   inputs:
     deploymentScope: 'Resource Group'
     subscriptionId: '28f9aee8-f84f-4e4c-98ab-78353599c2e5'
+    azureResourceManagerConnection: 'PipelineService'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'template'
     location: 'North Europe'
