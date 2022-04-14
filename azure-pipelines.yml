@@ -10,13 +10,16 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
+-
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    ConnectedServiceName: 'VMDeploymentService'
+    azureResourceManagerConnection: 'MPN_VKL(28f9aee8-f84f-4e4c-98ab-78353599c2e5)'
     deploymentScope: 'Resource Group'
-    subscriptionId: 'ec765027-1f12-4615-a2fc-1a3a9f44cda2'
+    subscriptionId: '28f9aee8-f84f-4e4c-98ab-78353599c2e5'
+    action: 'Create Or Update Resource Group'
     resourceGroupName: 'template'
     location: 'North Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/patrikas-sestokas/AzureARMTemplate/main/VMtest.json'
-    # csmParametersFileLink: 'https://raw.githubusercontent.com/patrikas-sestokas/AzureARMTemplate/main/template/parameters.json'
+    csmFileLink: 'https://raw.githubusercontent.com/Vidmabruh/AzureARMTemplate/main/template/template.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/Vidmabruh/AzureARMTemplate/main/template/parameters.json'
+    deploymentMode: 'Incremental'
