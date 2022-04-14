@@ -10,11 +10,11 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
--
+
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    azureResourceManagerConnection: 'MPN_VKL(28f9aee8-f84f-4e4c-98ab-78353599c2e5)'
     deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'MPN_VKL(28f9aee8-f84f-4e4c-98ab-78353599c2e5)'
     subscriptionId: '28f9aee8-f84f-4e4c-98ab-78353599c2e5'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'template'
